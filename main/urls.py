@@ -39,6 +39,7 @@ urlpatterns = [
          views.ChangeUserInfoView.as_view(),
          name='profile_change'),
     path('accounts/profile/', views.profile, name='profile'),
+    path('<int:pk>/', views.by_rubric, name='by_rubric'),
     path('<str:page>/', views.other_page, name='other'),
     path('', views.index, name='index'),
 ]
