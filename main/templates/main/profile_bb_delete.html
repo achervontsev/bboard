@@ -1,0 +1,14 @@
+{% extends "layout/base.html" %}
+
+{% load bootstrap4 %}
+
+{% block title %}Удаление объявления - Профиль пользователя{% endblock %}
+
+{% block content %}
+  <h2>Удаление объявления</h2>
+  <h3>Вы уверены, что хотите удалить объявление "{{ bb.title }}"</h3>
+  <form method="post">
+    {% csrf_token %}
+    {% buttons submit='Удалить' %}{% endbuttons %}
+  </form>
+{% endblock %}
