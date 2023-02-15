@@ -10,7 +10,7 @@
   <ul class="list-unstyled">
     {% for bb in bbs %}
       <li class="media my-5 p-3 border">
-        {% url 'main:detail' rubric_pk=rubric.pk pk=bb.pk as url %}
+        {% url 'main:detail' rubric_pk=bb.rubric.pk pk=bb.pk as url %}
         <a href="{{ url }}{{ all }}">
           {% if bb.image %}
             <img class="mr-3" src="{% thumbnail bb.image 'default' %}">
